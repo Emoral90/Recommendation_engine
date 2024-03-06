@@ -16,6 +16,6 @@ print(f"Vote count quantile: {M}")
 
 # Use the copy() method to ensure a new pandas DataFrame can be independantly created
 # based off the original DataFrame
-q_movies = metadata.copy().loc[["vote_count"] >= M]
+q_movies = metadata.copy()["vote_count"]
 print(q_movies.shape)
 # use a logical operator to filter movies greater than or equal to 160 vote counts
